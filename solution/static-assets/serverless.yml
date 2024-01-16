@@ -10,7 +10,7 @@ provider:
 custom:
   stage: ${opt:stage, self:provider.stage}
   s3Sync:
-    - bucketName: eregs-${self:custom.stage}-site-assets
+    - bucketName: eregulations-${self:custom.stage}-site-assets
       localDir: ./regulations
       deleteRemoved: false
   pythonRequirements:
