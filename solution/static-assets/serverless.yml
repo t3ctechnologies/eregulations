@@ -40,7 +40,7 @@ resources:
     AssetsBucket:
       Type: AWS::S3::Bucket
       Properties:
-        BucketName: eregsulations-${self:custom.stage}-site-assets
+        BucketName: eregulations-${self:custom.stage}-site-assets
         BucketEncryption:
           ServerSideEncryptionConfiguration:
             - ServerSideEncryptionByDefault:
