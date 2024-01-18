@@ -221,8 +221,8 @@ resources:
       Properties:
         DBSubnetGroupDescription: "RDS Subnet Group"
         SubnetIds:
-          - ${ssm:/account_vars/vpc/subnets/private/a/id}
-          - ${ssm:/account_vars/vpc/subnets/private/b/id}
+          - subnet-01de8e5c081a2af6e
+          - subnet-0c2e0a7a4fc60e6de
         Tags:
           - Key: "Name"
             Value: "DBSubnetGroup"
