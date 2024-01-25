@@ -68,3 +68,14 @@ The typical components in an image tag are shown in example below
 ||/account_vars/vpc/subnets/private/a/id| **YES** | The first subnet to deploy the Resources
 || /account_vars/vpc/subnets/private/b/id | | The second subnet to deploy the Resources
 ||/account_vars/vpc/id | **YES**| The VPC to deploy the resources
+
+
+
+## Create the SSM Variables
+This is done by running the CloudFormation template 
+```cp ssm.yaml.sample ssm.yaml```
+Edit the *required* values for the items in the file and create the SSM parameters **before** any other actions can be done
+```aws cloudformation create-stack --stack-name MyStack --template-body file://path_to_template/template.yaml --parameters file://path_to_parameters/ssm.yaml
+```
+
+## Create the Github Environment and Secrets
