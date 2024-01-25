@@ -79,3 +79,5 @@ Edit the *required* values for the items in the file and create the SSM paramete
 ```
 
 ## Create the Github Environment and Secrets
+
+## Create OIDC Role for Github actions to execute actions on your AWS VPC  
