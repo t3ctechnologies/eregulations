@@ -1,0 +1,232 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: CloudFormation SSM Parameters for the serverless application
+
+Resources:
+
+  DBPassword:
+    Type: 'AWS::SSM::Parameter'
+    Properties:
+      Name: '/eregulations/db/password'
+      Type: 'String'
+      Required: true
+      Description: 'The DataBase Password for the application'
+
+  DBHost:
+    Type: 'AWS::SSM::Parameter'
+    Properties:
+      Name: '/eregulations/db/host'
+      Type: 'String'
+      Required: true
+      Description: 'The Database host'
+
+  DBPort:
+    Type: 'AWS::SSM::Parameter'
+    Properties:
+      Name: '/eregulations/db/port'
+      Type: 'String'
+      Value: '3309'
+      Description: 'Database port'
+
+  GoogleAnalyticsKey:
+    Type: 'AWS::SSM::Parameter'
+    Properties:
+      Name: '/eregulations/http/google_analytics'
+      Type: 'String'
+      Value: ''
+      Description: 'Google Analytics ID ( if used)'
+
+  HTTPUser:
+    Type: 'AWS::SSM::Parameter'
+    Properties:
+      Name: '/eregulations/http/user'
+      Type: 'String'
+      Value: 'eregs'
+      Description: 'HTTP User'
+
+  HttpPassword:
+    Type: 'AWS::SSM::Parameter'
+    Properties:
+      Name: '/eregulations/http/password'
+      Type: 'String'
+      Value: 'sgere'
+      Description: 'HTTP Password'
+
+  HTTPReaderUser:
+    Type: 'AWS::SSM::Parameter'
+    Properties:
+      Name: '/eregulations/http/reader_user'
+      Type: 'String'
+      Value: 'eregs'
+      Description: 'HTTP Reader '
+
+  HttpReaderPassword:
+    Type: 'AWS::SSM::Parameter'
+    Properties:
+      Name: '/eregulations/http/reader_password'
+      Type: 'String'
+      Value: 'eregs'
+      Description: 'HTTP Reader '
+
+  HttpUser:
+    Type: 'AWS::SSM::Parameter'
+    Properties:
+      Name: '/eregulations/http/user'
+      Type: 'String'
+      Value: 'eregs'
+      Description: 'HTTP Reader '
+
+  DjangoSettingsModule:
+    Type: 'AWS::SSM::Parameter'
+    Properties:
+      Name: '/eregulations/django_settings_module'
+      Type: 'String'
+      Value: 'eregs'
+      Description: 'HTTP Reader '
+
+  BaseURL:
+    Type: 'AWS::SSM::Parameter'
+    Properties:
+      Name: '/eregulations/base_url'
+      Type: 'String'
+      Value: 'eregs'
+      Description: 'HTTP Reader '
+
+  CustomURL:
+    Type: 'AWS::SSM::Parameter'
+    Properties:
+      Name: '/eregulations/custom_url'
+      Type: 'String'
+      Value: 'eregs'
+      Description: 'HTTP Reader '
+
+  SurveyURL:
+    Type: 'AWS::SSM::Parameter'
+    Properties:
+      Name: '/eregulations/survey_url'
+      Type: 'String'
+      Value: 'eregs'
+      Description: 'Survey URL'
+
+  SearchGovKey:
+    Type: 'AWS::SSM::Parameter'
+    Properties:
+      Name: '/eregulations/searchgov/key'
+      Type: 'String'
+      Value: 'eregs'
+      Description: 'Key for the Search Gov'
+
+  SearchGovSiteName:
+    Type: 'AWS::SSM::Parameter'
+    Properties:
+      Name: '/eregulations/searchgov/site_name'
+      Type: 'String'
+      Value: 'eregs'
+      Description: 'Signup URL'
+
+  SignupURL:
+    Type: 'AWS::SSM::Parameter'
+    Properties:
+      Name: '/eregulations/signup_url'
+      Type: 'String'
+      Value: 'eregs'
+      Description: 'Signup URL'
+
+  Clientsecret:
+    Type: 'AWS::SSM::Parameter'
+    Properties:
+      Name: '/eregulations/oidc/client_secret'
+      Type: 'String'
+      Value: 'eregs'
+      Description: 'Signup URL'
+
+  AuthorizationEndpoint:
+    Type: 'AWS::SSM::Parameter'
+    Properties:
+      Name: '/eregulations/oidc/authorization_endpoint'
+      Type: 'String'
+      Value: 'eregs'
+      Description: 'Signup URL'
+
+  TokenEndPoint:
+    Type: 'AWS::SSM::Parameter'
+    Properties:
+      Name: '/eregulations/oidc/token_endpoint'
+      Type: 'String'
+      Value: 'eregs'
+      Description: 'Signup URL'
+
+  OIDCJWKSEnfPoint:
+    Type: 'AWS::SSM::Parameter'
+    Properties:
+      Name: '/eregulations/oidc/jwks_endpoint'
+      Type: 'String'
+      Value: 'eregs'
+      Description: 'Signup URL'
+
+  OIDCUserEndpoint:
+    Type: 'AWS::SSM::Parameter'
+    Properties:
+      Name: '/eregulations/oidc/user_endpoint'
+      Type: 'String'
+      Value: 'eregs'
+      Description: 'Signup URL'
+
+  EndEUASession:
+    Type: 'AWS::SSM::Parameter'
+    Properties:
+      Name: '/eregulations/oidc/end_eua_session'
+      Type: 'String'
+      Value: 'eregs'
+      Description: 'Signup URL'
+
+  BasicSearchFilter:
+    Type: 'AWS::SSM::Parameter'
+    Properties:
+      Name: '/eregulations/basic_search_filter'
+      Type: 'String'
+      Value: 'eregs'
+      Description: 'Signup URL'
+
+  QuotedSearchFilter:
+    Type: 'AWS::SSM::Parameter'
+    Properties:
+      Name: '/eregulations/quoted_search_filter'
+      Type: 'String'
+      Value: 'eregs'
+      Description: 'Signup URL'
+
+  EUAFeatureFlag:
+    Type: 'AWS::SSM::Parameter'
+    Properties:
+      Name: '/eregulations/eua/featureflag'
+      Type: 'String'
+      Value: ''
+      Description: 'Required only if EUA is enabled'
+
+  SubnetID1:
+    Type: 'AWS::SSM::Parameter'
+    Properties:
+      Required: true
+      Name: '/account_vars/vpc/subnets/private/a/id'
+      Type: 'String'
+      Value: 'subnet-0c2e0a7a4fc60e6de'
+      Description: 'The Second private Subnet ID in the VPC'
+
+  SubnetID2:
+    Type: 'AWS::SSM::Parameter'
+    Properties:
+      Required: true
+      Name: 'account_vars/vpc/subnets/private/b/id'
+      Type: 'String'
+      Value: 'subnet-01de8e5c081a2af6e'
+      Description: 'The Second private Subnet ID in the VPC'
+
+  VPCID:
+    Type: 'AWS::SSM::Parameter'
+    Properties:
+      Required: true
+      Name: '/account_vars/vpc/id}'
+      Type: 'String'
+      Value: 'subnet-01de8e5c081a2af6e'
+      Description: 'The VPC ID to deploy the resources'
+
