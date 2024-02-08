@@ -1,0 +1,21 @@
+# List of Policies to attach 
+
+
+
+
+
+Lambda Text Extractor ARN ---- ** NEEDS TO BE PRUNED too permissive **
+
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": "lambda:*",
+            "Resource": "*"
+        }
+    ]
+}
+```

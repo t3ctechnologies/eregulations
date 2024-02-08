@@ -1,0 +1,32 @@
+region: us-west-2
+stackName: MyEC2Stack
+parameters:
+  DBPassword: "er3gspwd12"
+  DBHost: 'eregs'
+  DBPort: '3309'
+  GoogleAnalyticsKey: ''
+  HTTPUser: 'httpuser'
+  HttpPassword: 'eregspwd'
+  HTTPReaderUser: 'httpreaderuser'
+  HttpReaderPassword: 'eregspwd'
+  HttpUser: 'eregs'
+  DjangoSettingsModule: 'settings'
+  BaseURL: '/'
+  CustomURL: '/custom'
+  SurveyURL: '/survey'
+  SearchGovKey: ''
+  SearchGovSiteName: ''
+  SignupURL: ''
+  Clientsecret: 'myawesomesecret'
+  AuthorizationEndpoint: ''
+  TokenEndPoint: ''
+  OIDCJWKSEnfPoint: ''
+  OIDCUserEndpoint: ''
+  EndEUASession: ''
+  BasicSearchFilter: ''
+  QuotedSearchFilter: ''
+  EUAFeatureFlag: ''
+  SubnetID1: 'subnet-0c2e0a7a4fc60e6de'
+  SubnetID2: 'subnet-01de8e5c081a2af6e'
+  VPCID: 'vpc-023c56239136e4cc8'
+
