@@ -22,7 +22,7 @@ provider:
     #Test_config: 'test'
     DB_PASSWORD: "Password"
     DB_HOST: "ereg"
-    DB_PORT: 3052
+    DB_PORT: "3306"
     GA_ID: ""
     HTTP_AUTH_USER: "user"
     HTTP_AUTH_PASSWORD: "password"
@@ -79,7 +79,7 @@ custom:
     DB_NAME: eregs
     USERNAME: eregsuser
     ALLOWED_HOST: '.amazonaws.com'
-    text_extractor_arn: ${cf:text-extractor-${self:custom.stage}.TextDashextractorLambdaFunctionQualifiedArn}
+    text_extractor_arn: "arn:aws:iam::227463533165:role/MyARN"
   cloudfrontInvalidate:
     - distributionId: ${cf:cmcs-eregs-static-assets-${self:custom.stage}.CloudFrontDistributionId}
       items:
