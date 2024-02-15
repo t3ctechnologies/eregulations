@@ -17,39 +17,39 @@ provider:
       - 'multipart/form-data'
       - 'application/pdf'
   environment:
-    DB_NAME: ${self:custom.settings.DB_NAME}
-    DB_USER: ${self:custom.settings.USERNAME}
-    Test_config: 'test'
-    DB_PASSWORD: ${ssm:/eregulations/db/password}
-    DB_HOST: ${ssm:/eregulations/db/host}
-    DB_PORT: ${ssm:/eregulations/db/port}
-    GA_ID: ${ssm:/eregulations/http/google_analytics}
-    HTTP_AUTH_USER: ${ssm:/eregulations/http/user}
-    HTTP_AUTH_PASSWORD: ${ssm:/eregulations/http/password}
-    DJANGO_USERNAME: ${ssm:/eregulations/http/reader_user}
-    DJANGO_PASSWORD: ${ssm:/eregulations/http/reader_password}
-    DJANGO_ADMIN_USERNAME: ${ssm:/eregulations/http/user}
-    DJANGO_ADMIN_PASSWORD: ${ssm:/eregulations/http/password}
-    DJANGO_SETTINGS_MODULE: ${ssm:/eregulations/django_settings_module}
+    DB_NAME: "dbname"
+    DB_USER: "User"
+    #Test_config: 'test'
+    DB_PASSWORD: "Password"
+    DB_HOST: "ereg"
+    DB_PORT: 3052
+    GA_ID: ""
+    HTTP_AUTH_USER: "user"
+    HTTP_AUTH_PASSWORD: "password"
+    DJANGO_USERNAME: "user"
+    DJANGO_PASSWORD: "password"
+    DJANGO_ADMIN_USERNAME: "user"
+    DJANGO_ADMIN_PASSWORD: "password"
+    DJANGO_SETTINGS_MODULE: ""
     ALLOWED_HOST: '.amazonaws.com'
     STAGE_ENV: ${self:custom.stage}
-    STATIC_URL: ${self:custom.settings.static_url}
-    BASE_URL: ${ssm:/eregulations/base_url}
-    CUSTOM_URL: ${ssm:/eregulations/custom_url}
-    SURVEY_URL: ${ssm:/eregulations/survey_url}
-    SIGNUP_URL: ${ssm:/eregulations/signup_url}
-    SEARCHGOV_KEY: ${ssm:/eregulations/searchgov/key}
-    SEARCHGOV_SITE_NAME: ${ssm:/eregulations/searchgov/site_name}
-    OIDC_RP_CLIENT_ID:  ${ssm:/eregulations/oidc/client_id}
-    OIDC_RP_CLIENT_SECRET: ${ssm:/eregulations/oidc/client_secret}
-    OIDC_OP_AUTHORIZATION_ENDPOINT: ${ssm:/eregulations/oidc/authorization_endpoint}
-    OIDC_OP_TOKEN_ENDPOINT: ${ssm:/eregulations/oidc/token_endpoint}
-    OIDC_OP_JWKS_ENDPOINT: ${ssm:/eregulations/oidc/jwks_endpoint}
-    OIDC_OP_USER_ENDPOINT: ${ssm:/eregulations/oidc/user_endpoint}
-    OIDC_END_EUA_SESSION: ${ssm:/eregulations/oidc/end_eua_session}
-    BASIC_SEARCH_FILTER: ${ssm:/eregulations/basic_search_filter}
-    QUOTED_SEARCH_FILTER: ${ssm:/eregulations/quoted_search_filter}
-    EUA_FEATUREFLAG: ${ssm:/eregulations/eua/featureflag}
+    STATIC_URL: "/"
+    BASE_URL: "/"
+    CUSTOM_URL: "/"
+    SURVEY_URL: "/"
+    SIGNUP_URL: "/"
+    SEARCHGOV_KEY: "/"
+    SEARCHGOV_SITE_NAME: "/"
+    OIDC_RP_CLIENT_ID:  "/"
+    OIDC_RP_CLIENT_SECRET: "/"
+    OIDC_OP_AUTHORIZATION_ENDPOINT: "/"
+    OIDC_OP_TOKEN_ENDPOINT: "/"
+    OIDC_OP_JWKS_ENDPOINT: "/"
+    OIDC_OP_USER_ENDPOINT: "/"
+    OIDC_END_EUA_SESSION: "/"
+    BASIC_SEARCH_FILTER: "0.05"
+    QUOTED_SEARCH_FILTER: "0.05"
+    EUA_FEATUREFLAG: false
     DEPLOY_NUMBER: ${env:RUN_ID}
     AWS_STORAGE_BUCKET_NAME: file-repo-eregs-${self:custom.stage}
     TEXT_EXTRACTOR_ARN: ${self:custom.settings.text_extractor_arn}
