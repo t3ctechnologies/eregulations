@@ -131,13 +131,13 @@ resources:
                   - lambda.amazonaws.com
               Action: sts:AssumeRole
         # note that these rights are needed if you want your function to be able to communicate with resources within your vpc
-        PermissionsBoundary:
-          Fn::Join:
-            - ''
-            - - 'arn:aws:iam::'
-              - Ref: AWS::AccountId
-              - ':policy'
-              - ${ssm:/account_vars/iam/permissions_boundary_policy}
+        #PermissionsBoundary:
+        #  Fn::Join:
+        #    - ''
+        #    - - 'arn:aws:iam::'
+        #      - Ref: AWS::AccountId
+        #      - ':policy'
+         #     - ${ssm:/account_vars/iam/permissions_boundary_policy}
         ManagedPolicyArns:
           - arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole
         Policies:
