@@ -36,7 +36,8 @@ resources:
     LambdaFunctionRole:
       Type: AWS::IAM::Role
       Properties:
-        Path: ${ssm:/account_vars/iam/path}
+        Path: '/MyPath/'
+        #Path: ${ssm:/account_vars/iam/path}
         AssumeRolePolicyDocument:
           Version: '2012-10-17'
           Statement:
