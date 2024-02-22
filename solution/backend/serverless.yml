@@ -30,7 +30,7 @@ provider:
     DJANGO_PASSWORD: "password"
     DJANGO_ADMIN_USERNAME: "user"
     DJANGO_ADMIN_PASSWORD: "password"
-    DJANGO_SETTINGS_MODULE: ""
+    DJANGO_SETTINGS_MODULE: "test"
     ALLOWED_HOST: '.amazonaws.com'
     STAGE_ENV: ${self:custom.stage}
     STATIC_URL: "/"
