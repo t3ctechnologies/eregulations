@@ -47,7 +47,7 @@ resources:
                   - lambda.amazonaws.com
               Action: sts:AssumeRole
         # note that these rights are needed if you want your function to be able to communicate with resources within your vpc
-        PermissionsBoundary: 'arn:aws:iam::227463533165:policy/EregPolicy'
+        #PermissionsBoundary: 'arn:aws:iam::227463533165:policy/EregPolicy'
         #  Fn::Join:
         #    - ''
         #    - - 'arn:aws:iam::'
