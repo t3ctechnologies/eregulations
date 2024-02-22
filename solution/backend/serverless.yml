@@ -51,7 +51,7 @@ provider:
     QUOTED_SEARCH_FILTER: "0.05"
     EUA_FEATUREFLAG: false
     DEPLOY_NUMBER: ${env:RUN_ID}
-    AWS_STORAGE_BUCKET_NAME: file-repo-eregs-${self:custom.stage}
+    AWS_STORAGE_BUCKET_NAME: eregulations-file-repo-eregs-${self:custom.stage}
     TEXT_EXTRACTOR_ARN: arn:aws:iam::227463533165:role/MyARN
   tracing:
     apiGateway: true
