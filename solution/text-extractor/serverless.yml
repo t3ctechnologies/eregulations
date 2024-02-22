@@ -79,7 +79,7 @@ resources:
                       - ""
                       - - "arn:aws:s3:::"
                         - "Ref" : "ServerlessDeploymentBucket"
-                    - "arn:aws:s3:::file-repo-eregs-${self:custom.stage}/*"
+                    - "arn:aws:s3:::eregulations-file-repo-eregs-${self:custom.stage}/*"
           - PolicyName: LambdaPolicy
             PolicyDocument:
               Version: '2012-10-17'
@@ -107,7 +107,7 @@ resources:
                        - ""
                        - - "arn:aws:s3:::"
                          - "Ref" : "ServerlessDeploymentBucket"
-                     - "arn:aws:s3:::file-repo-eregs-${self:custom.stage}*"
+                     - "arn:aws:s3:::eregulations-file-repo-eregs-${self:custom.stage}*"
 
     ServerlessSecurityGroup:
       Type: AWS::EC2::SecurityGroup
