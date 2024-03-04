@@ -21,7 +21,7 @@ provider:
     DB_USER: "User"
     #Test_config: 'test'
     DB_PASSWORD: "Password"
-    DB_HOST: "ereg"
+    DB_HOST: "ereg-db"
     DB_PORT: "3306"
     GA_ID: ""
     HTTP_AUTH_USER: "user"
