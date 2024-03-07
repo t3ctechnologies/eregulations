@@ -17,12 +17,11 @@ provider:
       - 'multipart/form-data'
       - 'application/pdf'
   environment:
-    DB_NAME: "dbname"
-    DB_USER: "User"
-    #Test_config: 'test'
-    DB_PASSWORD: "Password"
-    DB_HOST: "ereg-db"
-    DB_PORT: "3306"
+    DB_NAME: ${self:custom.settings.DB_NAME}
+    DB_USER: ${self:custom.settings.USERNAME}
+    DB_PASSWORD: ${ssm:/eregulations/db/password}
+    DB_HOST: ${ssm:/eregulations/db/host}
+    DB_PORT: ${ssm:/eregulations/db/port}
     GA_ID: ""
     HTTP_AUTH_USER: "user"
     HTTP_AUTH_PASSWORD: "password"
