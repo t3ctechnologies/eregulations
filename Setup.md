@@ -22,4 +22,9 @@ The following environment variables are required to work
 ##### S3 Bucket Name: 
 AWS S3 Bucket Names are globally unique and  bucket Names to be used by the application must be defined in the Github environment variables prior to installing the application and resources on AWS
 
+ 1. Create an environment (e.g dev) on the environments variable 
+ 2. In this environment, create the following environment variables
+	 - key `AWS_STORAGE_BUCKET_NAME` and value `<YOUR_UNIQUE_S3_BUCKETNAME>`
+	 - key  `AWS_REGION` and value `<AWS_REGION_TO_DEPLOY>` e.g us-east-1
+
 
