@@ -3,7 +3,7 @@ variablesResolutionMode: 20210326
 
 provider:
   name: aws
-  runtime: go1.x
+  runtime: provided.al2023
   region: us-east-1
   iam:
     role: LambdaFunctionRole
