@@ -1,0 +1,24 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: CloudFormation Template to create multiple SSM parameters for use by the eregs app.
+Resources:
+  FirstParameter:
+    Type: AWS::SSM::Parameter
+    Properties:
+      Name: /application/first-parameter
+      Type: String
+      Value: !Ref FirstParameterValue
+  SecondParameter:
+    Type: AWS::SSM::Parameter
+    Properties:
+      Name: /application/second-parameter
+      Type: String
+      Value: !Ref SecondParameterValue
+Parameters:
+  FirstParameterValue:
+    Type: String
+    Description: Value for the first parameter
+    Required: True
+  SecondParameterValue:
+    Type: String
+    Description: Value for the second parameter
+    Require: True
